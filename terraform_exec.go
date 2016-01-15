@@ -232,7 +232,7 @@ func DownloadState(config *terraform_config.AwsConfig, environment string) {
 }
 
 func S3Key(keyName string, environment string) string {
-	return fmt.Sprintf("%s/tfstate/%s/terraform.tfstate", keyName, environment)
+	return fmt.Sprintf("%s/%s/terraform.tfstate", keyName, environment)
 }
 
 func IsTerraformProject() {
